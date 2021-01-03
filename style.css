@@ -1,0 +1,114 @@
+p.aanVang {
+    position: relative;
+    color: red;
+    color: green;
+    color: cornflowerblue;
+    left: 100px;
+}
+
+div.kaartje {
+    position: relative;
+    background: cornflowerblue;
+    background: lightblue;
+    border: 7px solid cornsilk;
+    width: 500px;
+    height: 330px;
+    left: 100px;
+    top: 20px;
+}
+
+/* Gelukkig nieuwjaar */
+
+div.gelukkigNieuwJaar {
+    position: absolute;
+    color: cornsilk;
+    font-size: x-large;
+    top: 100px;
+    left: 0px;
+    animation-name: gelukkigNieuwJaar;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes gelukkigNieuwJaar {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(270px);
+    }
+}
+
+/* wolkje */
+
+img.wolkje {
+    position: absolute;
+    color: red;
+    /* border: 3px solid green; */
+    left: 0px;
+    top: 20px;
+    transform: rotate(-7deg)
+}
+
+img.zon {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    opacity: 0.7;
+}
+
+div.voorNaam {
+    position: absolute;
+    color: red;
+    color: cornsilk;
+    left: 270px;
+    bottom: 135px;
+    opacity: 0;
+    animation-name: voorNaam;
+    animation-duration: 11s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes voorNaam {
+    from {
+        /* transform: translateY(0px); */
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        /* transform: translateY(-135px); */
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+div.berichtje {
+    position: absolute;
+    color: green;
+    color: cornsilk;
+    font-style: italic;
+    left: 20px;
+    bottom: -40px;
+    animation-name: berichtje;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+@keyframes berichtje {
+    from {
+        /* opacity: 0; */
+        transform: translateY(0px);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateY(-60px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {}
+    div.kaartje {}
+}
